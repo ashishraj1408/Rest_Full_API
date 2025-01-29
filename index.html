@@ -87,7 +87,7 @@
   function loadTable(){ 
     $("#load-table").html("");
     $.ajax({ 
-      url : 'http://localhost/php-rest-api-php/api-fetch-all.php',
+      url : 'http://localhost/Rest_Full_API/api-fetch-all.php',
       type : "GET",
       success : function(data){
         if(data.status == false){
@@ -155,7 +155,7 @@
       message("All Fields are required.",false);
     }else{
       $.ajax({ 
-      url : 'http://localhost/php-rest-api-php/api-insert.php',
+      url : 'http://localhost/Rest_Full_API/api-insert.php',
       type : "POST",
       data : jsonObj,
       success : function(data){
@@ -181,7 +181,7 @@
       var row = this;
 
       $.ajax({
-      url : 'https://localhost/php-rest-api-php/api-delete.php',
+      url : 'https://localhost/Rest_Full_API/api-delete.php',
       type : "POST",
       data : myJSON,
       success : function(data){
@@ -203,7 +203,7 @@
     var myJSON = JSON.stringify(obj);
 
       $.ajax({
-      url : 'http://localhost/php-rest-api-php/api-fetch-single.php',
+      url : 'http://localhost/Rest_Full_API/api-fetch-single.php',
       type : "POST",
       data : myJSON,
       success : function(data){
@@ -231,7 +231,7 @@
       message("All Fields are required.",false);
     }else{
       $.ajax({ 
-      url : 'http://localhost/php-rest-api-php/api-update.php',
+      url : 'http://localhost/Rest_Full_API/api-update.php',
       type : "POST",
       data : jsonObj,
       success : function(data){
@@ -253,7 +253,7 @@
     $("#load-table").html("");
 
     $.ajax({ 
-      url : 'http://localhost/php-rest-api-php/api-search.php?search=' + search_term,
+      url : 'http://localhost/Rest_Full_API/api-search.php?search=' + search_term,
       type : "GET",
       success : function(data){
        if(data.status == false){
